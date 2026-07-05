@@ -1,10 +1,18 @@
+import Certifications from "../components/coaches/Certifications";
+import Hero from "../components/coaches/Hero";
+import Instagram from "../components/coaches/Instagram";
+import Introduction from "../components/coaches/Introduction";
+import Skills from "../components/coaches/Skills";
+
 function Coaches() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-5xl font-bold">
-        Coaches Page
-      </h1>
-    </div>
+    <>
+      <Hero />
+      <Certifications />
+      <Introduction />
+      <Skills />
+      <Instagram />
+    </>
   );
 }
 
