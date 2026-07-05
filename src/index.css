@@ -1,1 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Bebas+Neue&display=swap");
 @import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  background: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-title {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.nav-font {
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 1px;
+}
