@@ -8,6 +8,7 @@ import Hero from "../components/home/Hero";
 import Pricing from "../components/home/Pricing";
 import Review from "../components/home/Reviews";
 import Schedule from "../components/home/Schedule";
+import Contact from "../components/home/Contact";
 
 function Home() {
   return (
@@ -22,6 +23,7 @@ function Home() {
       <Coaches  />
       <Blog />
       <Gallery />
+      <Contact />
     </>
   );
 }
