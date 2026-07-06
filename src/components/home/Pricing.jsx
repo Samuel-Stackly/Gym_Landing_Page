@@ -48,72 +48,100 @@ const plans = [
 
 function Pricing() {
   return (
-    <section id="pricing" className="bg-white py-24">
-      <div className="mx-auto max-w-[1400px] px-8">
+    <section
+      id="pricing"
+      className="bg-white py-16 sm:py-20 lg:py-24"
+    >
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+
         {/* Heading */}
 
         <div className="text-center">
-          <h2 className="hero-title text-6xl uppercase text-[#ff2a1f]">
+
+          <h2 className="hero-title text-4xl uppercase text-[#ff2a1f] sm:text-5xl lg:text-6xl">
             Join Now
           </h2>
 
-          <h3 className="nav-font mt-4 text-2xl uppercase text-[#444]">
+          <h3 className="nav-font mt-3 text-xl uppercase text-[#444] sm:text-2xl">
             Join & Be One Of Us
           </h3>
+
         </div>
 
-        {/* Pricing Cards */}
+        {/* Cards */}
 
-        <div className="mt-20 grid grid-cols-1 border border-gray-400 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 xl:mt-20 xl:grid-cols-3 xl:gap-0">
+
           {plans.map((plan) => (
+
             <div
               key={plan.id}
-              className="flex min-h-[620px] flex-col border-r border-gray-400 last:border-r-0"
+              className="flex min-h-[560px] flex-col border border-gray-300 bg-white xl:min-h-[620px]"
             >
-              {/* Card Content */}
 
-              <div className="flex flex-1 flex-col items-center px-10 py-14">
-                <h3 className="hero-title text-5xl uppercase text-[#ff2a1f]">
+              {/* Content */}
+
+              <div className="flex flex-1 flex-col items-center px-6 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
+
+                <h3 className="hero-title text-4xl uppercase text-[#ff2a1f] sm:text-5xl">
                   {plan.title}
                 </h3>
 
                 <img
                   src={plan.icon}
                   alt={plan.title}
-                  className="my-12 h-16 w-auto"
+                  className="my-8 h-14 w-auto sm:my-10 sm:h-16"
                 />
 
-                <div className="space-y-3 text-center">
+                <div className="space-y-4 text-center">
+
                   {plan.features.map((feature) => (
+
                     <p
                       key={feature}
-                      className="nav-font text-xl uppercase text-[#333]"
+                      className="nav-font text-base uppercase text-[#333] sm:text-lg lg:text-xl"
                     >
                       {feature}
                     </p>
+
                   ))}
+
                 </div>
 
-                <div className="mt-auto pt-12">
-                  <h4 className="hero-title text-5xl uppercase text-[#ff2a1f] text-center">
+                <div className="mt-auto pt-10">
+
+                  <h4 className="hero-title text-center text-3xl uppercase text-[#ff2a1f] sm:text-4xl lg:text-5xl">
                     {plan.price}
                   </h4>
+
                 </div>
+
               </div>
 
-              {/* Button only for Basic */}
+              {/* Button */}
 
               {plan.highlighted ? (
-                <button className="flex h-20 w-full items-center justify-center gap-3 bg-[#ff2a1f] hero-title text-3xl uppercase text-white transition hover:bg-red-700">
+
+                <button className="flex h-16 w-full items-center justify-center gap-3 bg-[#ff2a1f] hero-title text-xl uppercase text-white transition hover:bg-red-700 sm:h-18 sm:text-2xl lg:h-20 lg:text-3xl">
+
                   Enroll Now
+
                   <ArrowRight size={22} />
+
                 </button>
+
               ) : (
-                <div className="h-20"></div>
+
+                <div className="h-16 sm:h-18 lg:h-20"></div>
+
               )}
+
             </div>
+
           ))}
+
         </div>
+
       </div>
     </section>
   );

@@ -15,19 +15,19 @@ function Review() {
   return (
     <section
       id="reviews"
-      className="bg-white py-24"
+      className="bg-white py-16 sm:py-20 lg:py-24"
     >
-      <div className="mx-auto max-w-[1400px] px-8">
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
 
         <div className="text-center">
 
-          <h2 className="hero-title text-6xl uppercase text-[#ff2a1f]">
+          <h2 className="hero-title text-4xl uppercase text-[#ff2a1f] sm:text-5xl lg:text-6xl">
             Review
           </h2>
 
-          <h3 className="nav-font mt-4 text-2xl uppercase text-[#444]">
+          <h3 className="nav-font mt-3 text-xl uppercase text-[#444] sm:text-2xl">
             Read What People Says
           </h3>
 
@@ -35,40 +35,46 @@ function Review() {
 
         {/* Review */}
 
-        <div className="mt-20 grid items-center gap-20 lg:grid-cols-2">
+        <div className="mt-12 grid items-center gap-10 md:mt-16 lg:mt-20 lg:grid-cols-2 lg:gap-20">
 
           {/* Left */}
 
-          <div>
+          <div className="flex justify-center">
 
             <img
               src={reviews[0].image}
               alt={reviews[0].name}
-              className="w-full max-w-[520px]"
+              className="w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[520px]"
             />
 
           </div>
 
           {/* Right */}
 
-          <div>
+          <div className="text-center lg:text-left">
 
-            <p className="text-lg leading-10 text-gray-600">
+            <p className="text-base leading-8 text-gray-600 sm:text-lg sm:leading-9 lg:leading-10">
               {reviews[0].review}
             </p>
 
-            <h4 className="hero-title mt-10 inline-block border-b-4 border-blue-500 text-4xl uppercase text-[#222]">
+            <h4 className="hero-title mt-8 inline-block border-b-4 border-blue-500 pb-2 text-3xl uppercase text-[#222] sm:text-4xl">
               {reviews[0].name}
             </h4>
 
-            <div className="mt-10 flex gap-6">
+            <div className="mt-8 flex justify-center gap-5 lg:justify-start lg:gap-6">
 
               <button className="transition hover:text-[#ff2a1f]">
-                <ArrowLeft size={26} />
+                <ArrowLeft
+                  size={22}
+                  className="sm:size-6 lg:size-7"
+                />
               </button>
 
               <button className="text-gray-300 transition hover:text-[#ff2a1f]">
-                <ArrowRight size={26} />
+                <ArrowRight
+                  size={22}
+                  className="sm:size-6 lg:size-7"
+                />
               </button>
 
             </div>

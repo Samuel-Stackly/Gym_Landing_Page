@@ -33,19 +33,19 @@ function Blog() {
   return (
     <section
       id="blog"
-      className="bg-white py-24"
+      className="bg-white py-16 sm:py-20 lg:py-24"
     >
-      <div className="mx-auto max-w-[1400px] px-8">
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
 
         <div className="text-center">
 
-          <h2 className="hero-title text-6xl uppercase text-[#ff2a1f]">
+          <h2 className="hero-title text-4xl uppercase text-[#ff2a1f] sm:text-5xl lg:text-6xl">
             Blog
           </h2>
 
-          <h3 className="nav-font mt-4 text-2xl uppercase text-[#444]">
+          <h3 className="nav-font mt-3 text-xl uppercase text-[#444] sm:text-2xl">
             Read To Stay In Shape
           </h3>
 
@@ -53,13 +53,13 @@ function Blog() {
 
         {/* Blog Cards */}
 
-        <div className="mt-20 grid grid-cols-1 gap-10 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 xl:mt-20 xl:grid-cols-3 xl:gap-10">
 
           {blogs.map((blog) => (
 
             <article
               key={blog.id}
-              className="group cursor-pointer"
+              className="group overflow-hidden rounded-lg bg-white cursor-pointer"
             >
 
               {/* Image */}
@@ -69,14 +69,14 @@ function Blog() {
                 <img
                   src={blog.image}
                   alt={blog.title}
-                  className="h-[330px] w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="h-[240px] w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-[280px] lg:h-[330px]"
                 />
 
-                {/* Date */}
+                {/* Date Badge */}
 
-                <div className="absolute right-5 top-5 bg-[#ff2a1f] px-6 py-3">
+                <div className="absolute right-4 top-4 bg-[#ff2a1f] px-4 py-2 sm:right-5 sm:top-5 sm:px-5 sm:py-3">
 
-                  <span className="hero-title text-3xl uppercase text-white">
+                  <span className="hero-title text-lg uppercase text-white sm:text-2xl lg:text-3xl">
                     {blog.date}
                   </span>
 
@@ -86,13 +86,13 @@ function Blog() {
 
               {/* Content */}
 
-              <div className="mt-8">
+              <div className="mt-6 px-2 pb-2 sm:mt-8">
 
-                <h3 className="text-[34px] leading-snug text-[#222]">
+                <h3 className="text-2xl font-semibold leading-snug text-[#222] sm:text-3xl lg:text-[34px]">
                   {blog.title}
                 </h3>
 
-                <p className="mt-6 text-lg leading-9 text-gray-500">
+                <p className="mt-4 text-base leading-7 text-gray-500 sm:mt-6 sm:text-lg sm:leading-8 lg:leading-9">
                   {blog.description}
                 </p>
 

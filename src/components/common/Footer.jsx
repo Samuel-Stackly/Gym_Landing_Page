@@ -13,38 +13,35 @@ function Footer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     console.log(email);
-
-    // Newsletter API later
   };
 
   return (
-    <footer className="bg-[#141414] text-white">
+    <footer className="overflow-x-hidden bg-[#141414] text-white">
 
       {/* Top */}
 
-      <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-12 px-8 py-16 lg:flex-row">
+      <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-10 px-4 py-12 sm:px-6 lg:flex-row lg:px-8 lg:py-16">
 
         {/* Logo */}
 
         <img
           src={logo}
           alt="Beast"
-          className="h-14"
+          className="h-12 sm:h-14"
         />
 
         {/* Newsletter */}
 
-        <div className="flex flex-col items-center gap-8 lg:flex-row">
+        <div className="flex w-full flex-col items-center gap-6 lg:w-auto lg:flex-row">
 
-          <h3 className="nav-font text-xl uppercase">
+          <h3 className="nav-font text-center text-lg uppercase sm:text-xl">
             Subscribe To Our Newsletter
           </h3>
 
           <form
             onSubmit={handleSubmit}
-            className="flex h-20 w-[420px] items-center justify-between bg-[#23282c] px-8"
+            className="flex h-16 w-full max-w-[420px] items-center justify-between bg-[#23282c] px-5 sm:h-20 sm:px-8"
           >
 
             <input
@@ -52,13 +49,14 @@ function Footer() {
               placeholder="YOUR EMAIL"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-transparent text-lg uppercase outline-none placeholder:text-white"
+              className="w-full bg-transparent text-sm uppercase outline-none placeholder:text-white sm:text-base lg:text-lg"
             />
 
-            <button type="submit">
-
-              <ArrowRight size={24} />
-
+            <button
+              type="submit"
+              className="ml-3 shrink-0"
+            >
+              <ArrowRight size={22} />
             </button>
 
           </form>
@@ -73,25 +71,25 @@ function Footer() {
 
       {/* Bottom */}
 
-      <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-8 px-8 py-10 lg:flex-row">
+      <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-8 px-4 py-8 text-center sm:px-6 lg:flex-row lg:px-8 lg:text-left">
 
         {/* Copyright */}
 
-        <p className="text-lg text-gray-300">
-          © Beast 2019 All Rights reserved.
+        <p className="text-base text-gray-300 lg:text-lg">
+          © Beast 2019 All Rights Reserved.
         </p>
 
         {/* Links */}
 
-        <div className="flex items-center gap-8">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
 
-          <button className="uppercase hover:text-[#ff2a1f] transition">
+          <button className="text-sm uppercase transition hover:text-[#ff2a1f] sm:text-base">
             Terms & Conditions
           </button>
 
-          <div className="h-6 w-px bg-gray-500"></div>
+          <div className="hidden h-5 w-px bg-gray-500 sm:block"></div>
 
-          <button className="uppercase hover:text-[#ff2a1f] transition">
+          <button className="text-sm uppercase transition hover:text-[#ff2a1f] sm:text-base">
             Privacy Policy
           </button>
 
@@ -99,13 +97,13 @@ function Footer() {
 
         {/* Social */}
 
-        <div className="flex gap-6">
+        <div className="flex items-center gap-5">
 
           <a href="#">
             <img
               src={facebook}
               alt="Facebook"
-              className="h-10 w-10 transition hover:scale-110"
+              className="h-8 w-8 transition hover:scale-110 sm:h-10 sm:w-10"
             />
           </a>
 
@@ -113,7 +111,7 @@ function Footer() {
             <img
               src={twitter}
               alt="Twitter"
-              className="h-10 w-10 transition hover:scale-110"
+              className="h-8 w-8 transition hover:scale-110 sm:h-10 sm:w-10"
             />
           </a>
 
@@ -121,7 +119,7 @@ function Footer() {
             <img
               src={instagram}
               alt="Instagram"
-              className="h-10 w-10 transition hover:scale-110"
+              className="h-8 w-8 transition hover:scale-110 sm:h-10 sm:w-10"
             />
           </a>
 
@@ -129,7 +127,7 @@ function Footer() {
             <img
               src={linkedin}
               alt="LinkedIn"
-              className="h-10 w-10 transition hover:scale-110"
+              className="h-8 w-8 transition hover:scale-110 sm:h-10 sm:w-10"
             />
           </a>
 

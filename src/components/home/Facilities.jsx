@@ -30,23 +30,23 @@ function Facilities() {
   return (
     <section
       id="facilities"
-      className="bg-white py-24"
+      className="bg-white py-16 sm:py-20 lg:py-24"
     >
-      <div className="mx-auto max-w-[1400px] px-8">
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
 
         <div className="mx-auto max-w-4xl text-center">
 
-          <h2 className="hero-title text-6xl uppercase text-[#ff2a1f]">
+          <h2 className="hero-title text-4xl uppercase text-[#ff2a1f] sm:text-5xl lg:text-6xl">
             Facilities
           </h2>
 
-          <h3 className="nav-font mt-4 text-2xl uppercase text-[#444]">
+          <h3 className="nav-font mt-3 text-xl uppercase text-[#444] sm:text-2xl">
             How It Feels To Be With Us
           </h3>
 
-          <p className="mt-8 text-lg leading-9 text-gray-500">
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-gray-500 sm:mt-8 sm:text-lg sm:leading-9">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -59,30 +59,34 @@ function Facilities() {
 
         {/* Cards */}
 
-        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-16 md:grid-cols-2 lg:gap-8 xl:grid-cols-4">
 
           {facilities.map((facility) => (
 
             <div
               key={facility.id}
-              className="group relative cursor-pointer overflow-hidden"
+              className="group relative h-[320px] cursor-pointer overflow-hidden rounded-lg sm:h-[380px] xl:h-[430px]"
             >
 
               <img
                 src={facility.image}
                 alt={facility.title}
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
-              {/* Dark Overlay */}
+              {/* Overlay */}
 
-              <div className="absolute inset-0 bg-black/25 group-hover:bg-black/45 transition duration-500"></div>
+              <div className="absolute inset-0 bg-black/25 transition duration-500 group-hover:bg-black/45"></div>
 
               {/* Title */}
 
-              <h3 className="hero-title absolute bottom-6 left-6 text-5xl uppercase text-white">
-                {facility.title}
-              </h3>
+              <div className="absolute bottom-5 left-5 right-5">
+
+                <h3 className="hero-title text-3xl uppercase leading-tight text-white sm:text-4xl lg:text-5xl">
+                  {facility.title}
+                </h3>
+
+              </div>
 
             </div>
 
