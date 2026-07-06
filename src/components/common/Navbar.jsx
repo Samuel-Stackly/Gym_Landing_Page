@@ -16,40 +16,42 @@ function Navbar() {
 
         {/* Navigation */}
         <nav className="hidden items-center gap-10 lg:flex">
-          <a
-            href="#about"
-            className="text-[15px] font-semibold uppercase tracking-wide text-red-500 transition-colors duration-300"
-          >
-            About Us
-          </a>
+          
 
-          <a
-            href="#facilities"
+           <NavLink
+            to="/about"
+            className="text-[15px] font-semibold uppercase tracking-wide text-white transition-colors duration-300 hover:text-red-500"
+          >
+            About
+          </NavLink>
+
+          <NavLink
+            to="/facilities"
             className="text-[15px] font-semibold uppercase tracking-wide text-white transition-colors duration-300 hover:text-red-500"
           >
             Facilities
-          </a>
+          </NavLink>
 
-          <a
-            href="#bmi"
+          <NavLink
+            to="/bmi"
             className="text-[15px] font-semibold uppercase tracking-wide text-white transition-colors duration-300 hover:text-red-500"
           >
             BMI
-          </a>
+          </NavLink>
 
-          <a
-            href="#schedule"
+          <NavLink
+            to="/schedule"
             className="text-[15px] font-semibold uppercase tracking-wide text-white transition-colors duration-300 hover:text-red-500"
           >
             Schedule
-          </a>
+          </NavLink>
 
-          <a
-            href="#reviews"
+          <NavLink
+            to="/reviews"
             className="text-[15px] font-semibold uppercase tracking-wide text-white transition-colors duration-300 hover:text-red-500"
           >
             Reviews
-          </a>
+          </NavLink>
 
           <NavLink
             to="/coaches"
@@ -58,19 +60,20 @@ function Navbar() {
             Coaches
           </NavLink>
 
-          <a
-            href="#blog"
+          <NavLink
+            to="/blog"
             className="text-[15px] font-semibold uppercase tracking-wide text-white transition-colors duration-300 hover:text-red-500"
           >
             Blog
-          </a>
+          </NavLink>
 
-          <a
-            href="#gallery"
+          <NavLink
+            to="/gallery"
             className="text-[15px] font-semibold uppercase tracking-wide text-white transition-colors duration-300 hover:text-red-500"
           >
             Gallery
-          </a>
+          </NavLink>
+
         </nav>
 
         {/* Join Button */}

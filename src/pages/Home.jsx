@@ -1,4 +1,4 @@
-import About from "../components/home/About";
+
 import Blog from "../components/home/Blog";
 import BMI from "../components/home/BMI";
 import Coaches from "../components/home/Coaches";
@@ -14,15 +14,8 @@ function Home() {
   return (
     <>
       <Hero />
-      <About />
-      <Facilities />
-      <BMI />
-      <Schedule />
-      <Review />
       <Pricing />
       <Coaches  />
-      <Blog />
-      <Gallery />
       <Contact />
     </>
   );
